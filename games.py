@@ -20,12 +20,12 @@ class CasinoGame:
         winnings = self.bet * amount_mul
         self.user.balance += winnings
         self.user.wins += 1
-        self.user.games_played += 1
+       
         print(f"You won ₹{winnings}!")
 
     def loss(self):
         self.user.losses += 1
-        self.user.games_played += 1
+       
         print("You lost the bet.")
 
 
@@ -58,7 +58,7 @@ class GuessGame(CasinoGame):
         number = int(input("Choose a number (1-10): "))
         ran_num = random.randint(1, 10)
         
-        print("Dice rolled:", ran_num)
+        print("Random number is :", ran_num)
         
         if number == ran_num:
             self.win(2)

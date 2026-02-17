@@ -4,11 +4,15 @@ import os
 
 
 class User:
-    def __init__(self, name):
+
+    
+    def __init__(self, name, balance=1200, wins=0, losses=0):
         self.username = name
-        self.balance = 1200
-        self.wins = 0
-        self.losses = 0
+        self.balance = balance
+        self.wins = wins
+        self.losses = losses
+
+    
 
     def games_played(self):
 
